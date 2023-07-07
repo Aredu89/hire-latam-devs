@@ -1,8 +1,13 @@
 import React from 'react';
 
+import { Logo } from '@/app/components';
+
+import styles from './header.module.css';
+
 const Header = () => (
-  <nav>
-    Navigation bar
+  <nav className={styles.navContainer}>
+    <Logo />
+    <div>Menu Items and Button</div>
   </nav>
 );
 

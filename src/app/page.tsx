@@ -1,12 +1,13 @@
-import Image from 'next/image';
-import styles from './page.module.css';
+import { Header, MainSection } from './layouts';
+import { Rubik } from 'next/font/google';
 
-import { Header } from './layouts';
+const rubikFont = Rubik({ subsets: ['latin'] });
 
 export default function Home() {
   return (
-    <main className={styles.main}>
+    <main className={rubikFont.className}>
       <Header />
+      <MainSection />
     </main>
   );
 };

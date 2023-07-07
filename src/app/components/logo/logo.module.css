@@ -1,0 +1,35 @@
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+.logoBox {
+  position: relative;
+  background-color: transparent;
+  margin-right: .4rem;
+}
+
+.small {
+  height: 2rem;
+  width: 2rem;
+}
+
+.l {
+  background-color: var(--primary-color);
+  height: 100%;
+  width: 100%;
+  clip-path: path("M 100 200 Q 100 300 100 400 Q 200 400 300 400 Q 100 400 100 200 Z");
+  -webkit-clip-path: path("M 100 200 Q 100 300 100 400 Q 200 400 300 400 Q 100 400 100 200 Z");
+}
+
+.dContainer {
+  position: absolute;
+  left: -2px;
+  top: 4px;
+}
+
+.name {
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.1rem;
+}
