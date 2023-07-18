@@ -3,12 +3,18 @@ import React from 'react';
 import MenuItem from '../menuItem/menu-item.component';
 import { menuItem } from '../menuItem/menu-item.types';
 import styles from './menu.module.css';
+import Button from '../button/button.component';
 
 const Menu = ({
   items = []
 } : {
   items: menuItem[]
 }) => {
+
+  const handleOnClick = () => {
+    null
+  };
+
   return (
     <div className={styles.menuContainer}>
       {
@@ -20,6 +26,10 @@ const Menu = ({
           />
         ))
       }
+      <Button
+        text='Contact Us!'
+        isContactButton
+      />
     </div>
   )
 };

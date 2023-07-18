@@ -6,4 +6,7 @@
   padding: var(--padding-section);
   box-shadow: 1px 0px 53px -17px rgba(0,0,0,0.8);
   background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
