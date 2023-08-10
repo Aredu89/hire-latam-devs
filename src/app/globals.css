@@ -1,6 +1,7 @@
 :root {
-  --padding-section: 2.5rem 5rem;
+  --padding-section: 2.5rem 10rem;
   --primary-color: #273BDF;
+  --secondary-color: #b842fc;
 }
 
 * {
