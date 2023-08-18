@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Image from 'next/image';
 import styles from './mainSection.module.css';
 
 const MainSection = () => (
@@ -10,7 +11,15 @@ const MainSection = () => (
       <p>Hiring staff from LATAM can save you up to 40% in salaries.</p>
     </h2>
     <h5>Make your hiring process smoother with our help.</h5>
-    <div className={styles.animation}>Animation!</div>
+    <div className={styles.animation}>
+      <Image
+        src="/latam-map.png"
+        width={400}
+        height={400}
+        alt="LATAM map"
+        priority
+      />
+    </div>
   </section>
 );
 
