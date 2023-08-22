@@ -1,0 +1,10 @@
+.benefitsContainer {
+  padding: var(--padding-section);
+}
+
+.benefitsContainer h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}

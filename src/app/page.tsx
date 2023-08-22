@@ -1,4 +1,8 @@
-import { Header, MainSection } from './layouts';
+import {
+  Header,
+  MainSection,
+  TheBenefits
+} from './layouts';
 import { Rubik } from 'next/font/google';
 
 const rubikFont = Rubik({ subsets: ['latin'] });
@@ -8,6 +12,7 @@ export default function Home() {
     <main className={rubikFont.className}>
       <Header />
       <MainSection />
+      <TheBenefits />
     </main>
   );
 };
