@@ -1,5 +1,13 @@
 .benefitsContainer {
   padding: var(--padding-section);
+  display: grid;
+  row-gap: 2rem;
+}
+
+.cardsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
 }
 
 .benefitsContainer h1 {

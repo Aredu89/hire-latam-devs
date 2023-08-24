@@ -6,7 +6,7 @@ const config = {
       description: [
         'One of the most significant advantages of hiring LATAM developers is the cost savings that come with this strategy.',
         'The lower cost of living in LATAM countries compared to the US or Europe plays an importante part on it.',
-        'While the hourly rates of hiring developers from Latin America are lower, the quality of work remains just as high as when you hire a professional from North America.'
+        'While the hourly rates of hiring developers from Latin America are lower, the quality of work remains just as high as when you hire a professionals from North America.'
       ]
     },
     {

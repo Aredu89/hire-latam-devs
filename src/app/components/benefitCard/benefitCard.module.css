@@ -1,0 +1,19 @@
+.benefitCardContainer {
+  box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.2);
+  padding: 1.5rem 2.8rem;
+  border-radius: .5rem;
+}
+
+.rightAlignment {
+  text-align: right;
+}
+
+.title {
+  margin-bottom: 1rem;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
+.description {
+  font-weight: 300;
+}
