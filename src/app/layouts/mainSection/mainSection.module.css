@@ -11,21 +11,67 @@
   color: var(--secondary-color);
   padding: 2rem 0 0;
   font-size: 1.5rem;
+  animation-name: moveInLeft;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
 }
 
 .sectionContainer h2 {
   font-size: 3rem;
+  animation-name: moveInLeft;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
 }
 
 .sectionContainer h5 {
   font-size: 1.5rem;
   font-weight: 200;
+  animation-name: moveInLeft;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
 }
 
-.animation {
+.latamMap {
   display: flex;
   grid-column: 2 / 3;
   grid-row: 1 / span 4;
   align-items: center;
   justify-content: center;
+  animation-name: moveInTop;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
+}
+
+/* ----- Animations ------ */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-10rem);
+  }
+
+  80% {
+    transform: translateY(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
