@@ -2,6 +2,10 @@
   padding: var(--padding-section);
   display: grid;
   row-gap: 2rem;
+  margin-top: -2.5rem;
+  /* background-color: var(--light-background-color);
+  -webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%); */
 }
 
 .cardsContainer {

@@ -4,8 +4,17 @@
   border-radius: .5rem;
 }
 
-.rightAlignment {
-  text-align: right;
+
+.animation.right {
+  animation-name: moveInRight;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
+}
+
+.animation.left {
+  animation-name: moveInLeft;
+  animation-duration: .7s;
+  animation-timing-function: ease-in-out;
 }
 
 .title {
@@ -16,4 +25,38 @@
 
 .description {
   font-weight: 300;
+}
+
+/* ----- Animations ------ */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
