@@ -5,7 +5,7 @@ import config from './theBenefits.config';
 import { BenefitCard } from '@/app/components';
 
 const TheBenefits = () => (
-  <div className={styles.benefitsContainer}>
+  <div id='benefits' className={styles.benefitsContainer}>
     <h1>The benefits</h1>
     <div className={styles.cardsContainer}>
       {config.benefits.map(({id, title, description}, indx) => {
