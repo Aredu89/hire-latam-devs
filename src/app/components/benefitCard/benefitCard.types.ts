@@ -3,4 +3,5 @@ export type benefitCardProps = {
   title: string;
   description: Array<string>;
   rightAlignment?: boolean;
+  iconSlug?: string;
 };

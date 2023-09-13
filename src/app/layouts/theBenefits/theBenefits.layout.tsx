@@ -8,9 +8,15 @@ const TheBenefits = () => (
   <div id='benefits' className={styles.benefitsContainer}>
     <h1>The benefits</h1>
     <div className={styles.cardsContainer}>
-      {config.benefits.map(({id, title, description}, indx) => {
+      {config.benefits.map(({id, title, description, iconSlug}, indx) => {
           const isOdd = indx % 2 !== 0;
-          return <BenefitCard key={id} title={title} description={description} rightAlignment={isOdd} />
+          return <BenefitCard 
+                    key={id}
+                    title={title}
+                    description={description}
+                    rightAlignment={isOdd}
+                    iconSlug={iconSlug}
+                  />
         }
       )}
     </div>
