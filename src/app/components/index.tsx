@@ -3,11 +3,13 @@ import Logo from "./logo/logo.component";
 import Menu from "./menu/menu.component";
 import Button from "./button/button.component";
 import BenefitCard from "./benefitCard/benefitCard.component";
+import Step from "./step/step.component";
 
 export {
   MenuItem,
   Logo,
   Menu,
   Button,
-  BenefitCard
+  BenefitCard,
+  Step
 };

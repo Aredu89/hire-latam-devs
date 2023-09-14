@@ -1,0 +1,95 @@
+.stepContainer {
+  display: grid;
+  grid-template-columns: 35% 1fr;
+}
+
+.animation {
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.title {
+  padding-left: 1rem;
+  padding-bottom: .5rem;
+  align-self: end;
+}
+
+.title.small {
+  font-size: 2rem;
+}
+
+.title.medium {
+  font-size: 2.5rem;
+}
+
+.title.large {
+  font-size: 3rem;
+}
+
+.title.extraLarge {
+  font-size: 3.5rem;
+}
+
+.number {
+  padding-right: 1rem;
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  align-self: center;
+  justify-self: right;
+}
+
+.number.small {
+  font-size: 6rem;
+}
+
+.number.medium {
+  font-size: 7rem;
+}
+
+.number.large {
+  font-size: 8rem;
+}
+
+.number.extraLarge {
+  font-size: 9rem;
+}
+
+.description {
+  padding-left: 1rem;
+  font-size: 1.3rem;
+}
+
+/* -------ANIMATIONS------- */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    transform: translateX(1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+  }
+
+  80% {
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

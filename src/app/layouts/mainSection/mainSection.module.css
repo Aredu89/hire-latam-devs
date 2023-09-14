@@ -12,22 +12,23 @@
   padding: 2rem 0 0;
   font-size: 1.5rem;
   animation-name: moveInLeft;
-  animation-duration: .7s;
+  animation-duration: .8s;
   animation-timing-function: ease-in-out;
 }
 
 .sectionContainer h2 {
   font-size: 3rem;
   animation-name: moveInLeft;
-  animation-duration: .7s;
+  animation-duration: .8s;
   animation-timing-function: ease-in-out;
+  color: rgba(0,0,0,0.8);
 }
 
 .sectionContainer h5 {
   font-size: 1.5rem;
   font-weight: 200;
   animation-name: moveInLeft;
-  animation-duration: .7s;
+  animation-duration: .8s;
   animation-timing-function: ease-in-out;
 }
 

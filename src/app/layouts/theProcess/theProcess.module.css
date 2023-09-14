@@ -1,0 +1,22 @@
+.processContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 13rem 10rem;
+  background-color: var(--light-background-color);
+  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.processContainer h1 {
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+}
+
+.stepsContainer {
+  width: 90%;
+}

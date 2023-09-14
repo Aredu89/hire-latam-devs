@@ -1,7 +1,8 @@
 import {
   Header,
   MainSection,
-  TheBenefits
+  TheBenefits,
+  TheProcess
 } from './layouts';
 import { Rubik } from 'next/font/google';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <MainSection />
       <TheBenefits />
+      <TheProcess />
     </main>
   );
 };
