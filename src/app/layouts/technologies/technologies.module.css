@@ -1,0 +1,48 @@
+.technologiesContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-section);
+}
+
+.technologiesContainer h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.logosContainer {
+  display: grid;
+  grid-template-columns: repeat(10, minmax(3rem, 1fr));
+  gap: 1rem;
+  margin-top: 3.5rem;
+}
+
+.logoContainer {
+  opacity: 0;
+}
+
+.logoContainer.animation {
+  opacity: 1;
+  transition: opacity 0s;
+  animation-name: moveInBottom;
+  animation-duration: .8s;
+  animation-timing-function: ease-in-out;
+}
+
+/* -----Animations----- */
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  80% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
