@@ -9,10 +9,19 @@
   transition: all .2s;
 }
 
+.button.reverse {
+  background-color: white;
+  color: var(--primary-color);
+}
+
 .button:hover {
   cursor: pointer;
   transform: translateY(-2px);
   box-shadow: -1px 3px 31px -12px rgba(0,0,0,0.75);
+}
+
+.button:hover.reverse {
+  box-shadow: -1px 3px 31px -12px rgba(0,0,0,1);
 }
 
 .button:active {

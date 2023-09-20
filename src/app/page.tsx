@@ -3,7 +3,8 @@ import {
   MainSection,
   TheBenefits,
   TheProcess,
-  Technologies
+  Technologies,
+  Contact
 } from './layouts';
 import { Rubik } from 'next/font/google';
 
@@ -17,6 +18,7 @@ export default function Home() {
       <TheBenefits />
       <TheProcess />
       <Technologies />
+      <Contact />
     </main>
   );
 };

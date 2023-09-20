@@ -1,4 +1,4 @@
 export type buttonProps = {
   text: string;
-  isContactButton?: boolean;
+  reverseColors?: boolean;
 };

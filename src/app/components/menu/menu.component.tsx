@@ -28,7 +28,6 @@ const Menu = ({
       }
       <Button
         text='Contact Us!'
-        isContactButton
       />
     </div>
   )

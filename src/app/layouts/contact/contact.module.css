@@ -1,0 +1,47 @@
+.contactSectionContainer {
+  color: #fff;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: var(--padding-section);
+  -webkit-clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 10rem, 100% 0, 100% 100%, 0 100%);
+}
+
+.contactSectionContainer h2 {
+  font-size: 2rem;
+  margin: 10rem 0 3rem;
+}
+
+.contactSectionContainer button {
+  margin-bottom: 2rem;
+}
+
+.contactSectionContainer.animation h2 {
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+.contactSectionContainer.animation button {
+  animation-name: moveInBottom;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+}
+
+/* ----- Animations ----- */
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  80% {
+    transform: translateY(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

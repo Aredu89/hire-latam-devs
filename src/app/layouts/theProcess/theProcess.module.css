@@ -4,8 +4,8 @@
   align-items: center;
   padding: 13rem 10rem;
   background-color: var(--light-background-color);
-  -webkit-clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
-  clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+  -webkit-clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%);
+  clip-path: polygon(0 10rem, 100% 0, 100% calc(100% - 10rem), 0 100%);
 }
 
 .processContainer h1 {

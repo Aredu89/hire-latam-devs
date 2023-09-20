@@ -6,7 +6,7 @@ import styles from './button.module.css';
 
 const Button = ({
   text,
-  isContactButton
+  reverseColors
 }: buttonProps) => {
   
   const handleOnClick = () => {
@@ -14,7 +14,7 @@ const Button = ({
   };
   
   return (
-    <button className={styles.button} onClick={handleOnClick}>{text}</button>
+    <button className={`${styles.button} ${reverseColors ? styles.reverse : ''}`} onClick={handleOnClick}>{text}</button>
   )
 };
 
