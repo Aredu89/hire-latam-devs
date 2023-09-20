@@ -1,0 +1,5 @@
+.footerContainer {
+  padding: var(--padding-section);
+  background-color: var(--dark-background-color);
+  color: white;
+}

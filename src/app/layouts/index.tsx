@@ -4,6 +4,7 @@ import TheBenefits from "./theBenefits/theBenefits.layout";
 import TheProcess from "./theProcess/theProcess.layout";
 import Technologies from "./technologies/technologies.layout";
 import Contact from "./contact/contact.layout";
+import Footer from "./footer/footer.layout";
 
 export {
   Header,
@@ -11,5 +12,6 @@ export {
   TheBenefits,
   TheProcess,
   Technologies,
-  Contact
+  Contact,
+  Footer
 };
