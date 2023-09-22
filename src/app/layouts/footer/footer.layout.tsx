@@ -9,13 +9,13 @@ const Footer = () => {
     <div className={styles.footerContainer}>
       <section className={styles.infoSection}>
         <Logo footer />
-        <div>
+        <div className={styles.infoItem}>
           <h3>Visit Us</h3>
-          Address
+          <span>Address</span>
         </div>
-        <div>
+        <div className={styles.infoItem}>
           <h3>Contact Us</h3>
-          Email
+          <span>Email</span>
         </div>
       </section>
       <section className={styles.registerSection}>HireLatamDevs &copy; 2023</section>
