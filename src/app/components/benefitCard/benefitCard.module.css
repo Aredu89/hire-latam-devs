@@ -27,7 +27,8 @@
 }
 
 .title > img {
-  filter: invert(69%) sepia(76%) saturate(7364%) hue-rotate(256deg) brightness(95%) contrast(108%);
+  /* Icons color */
+  filter: invert(48%) sepia(87%) saturate(452%) hue-rotate(156deg) brightness(97%) contrast(92%);
 }
 
 .description {

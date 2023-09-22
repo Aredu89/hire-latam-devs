@@ -1,10 +1,10 @@
 :root {
   --padding-section: 2.5rem 10rem;
   --primary-color: #273BDF;
-  --secondary-color: #b842fc;
+  --secondary-color: #27a2df;
   --white-color: #fff;
   --light-background-color: #edf2fa;
-  --dark-background-color: #131c63;
+  --primary-color-dark: #131c63;
 }
 
 * {

@@ -7,19 +7,14 @@
   position: relative;
   background-color: transparent;
   margin-right: .4rem;
-}
-
-.small {
   height: 2rem;
   width: 2rem;
 }
 
-.l {
-  background-color: var(--primary-color);
-  height: 100%;
-  width: 100%;
-  clip-path: path("M 100 200 Q 100 300 100 400 Q 200 400 300 400 Q 100 400 100 200 Z");
-  -webkit-clip-path: path("M 100 200 Q 100 300 100 400 Q 200 400 300 400 Q 100 400 100 200 Z");
+.footer .logoBox {
+  height: 5rem;
+  width: 5rem;
+  margin-right: 1rem;
 }
 
 .dContainer {
@@ -28,8 +23,19 @@
   top: 4px;
 }
 
+.footer .dContainer {
+  left: -3px;
+  top: 8px;
+}
+
 .name {
   color: var(--primary-color);
   font-weight: 600;
   font-size: 1.1rem;
+}
+
+.footer .name {
+  color: white;
+  align-self: flex-start;
+  font-size: 1.7rem;
 }
