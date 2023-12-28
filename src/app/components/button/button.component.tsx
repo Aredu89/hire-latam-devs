@@ -6,11 +6,12 @@ import styles from './button.module.css';
 
 const Button = ({
   text,
-  reverseColors
+  reverseColors,
+  onClick
 }: buttonProps) => {
   
   const handleOnClick = () => {
-    console.log('Click contact button');
+    onClick();
   };
   
   return (

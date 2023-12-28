@@ -3,8 +3,11 @@ import React, { useEffect } from 'react';
 
 import styles from './contact.module.css';
 import { Button } from '@/app/components';
+import { useContactForm } from '@/app/context/contactForm.context';
 
 const Contact = () => {
+  const { toggleFormContactOpen } = useContactForm();
+
   useEffect(() => {
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
@@ -28,6 +31,7 @@ const Contact = () => {
       <Button
         text='Contact Us!'
         reverseColors
+        onClick={() => toggleFormContactOpen()}
       />
     </div>
   )

@@ -5,6 +5,7 @@ import TheProcess from "./theProcess/theProcess.layout";
 import Technologies from "./technologies/technologies.layout";
 import Contact from "./contact/contact.layout";
 import Footer from "./footer/footer.layout";
+import ContactForm from "./contactForm/contactForm.layout";
 
 export {
   Header,
@@ -13,5 +14,6 @@ export {
   TheProcess,
   Technologies,
   Contact,
-  Footer
+  Footer,
+  ContactForm
 };

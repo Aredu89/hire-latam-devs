@@ -1,0 +1,23 @@
+.container {
+  height: 0;
+  width: 0;
+  opacity: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  border-radius: 50%;
+
+  background-color: var(--light-background-color);
+}
+
+.open {
+  opacity: 1;
+  width: 100%;
+  height: 100vh;
+  transform: scale(1.5);
+}

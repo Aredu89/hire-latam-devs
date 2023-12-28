@@ -15,7 +15,7 @@ const steps = [
   {
     number: '02',
     title: 'Profiles',
-    description: 'Start receiving resumes of world-class LATAM developers.',
+    description: 'Start receiving resumes of world-class pre-vetted LATAM developers.',
     size: StepSize.M
   },
   {

@@ -1,18 +1,22 @@
+'use client'
+
 import React from 'react';
 
 import MenuItem from '../menuItem/menu-item.component';
 import { menuItem } from '../menuItem/menu-item.types';
 import styles from './menu.module.css';
 import Button from '../button/button.component';
+import { useContactForm } from '@/app/context/contactForm.context';
 
 const Menu = ({
   items = []
 } : {
   items: menuItem[]
 }) => {
+  const { toggleFormContactOpen } = useContactForm();
 
   const handleOnClick = () => {
-    null
+    toggleFormContactOpen();
   };
 
   return (
@@ -28,6 +32,7 @@ const Menu = ({
       }
       <Button
         text='Contact Us!'
+        onClick={handleOnClick}
       />
     </div>
   )
