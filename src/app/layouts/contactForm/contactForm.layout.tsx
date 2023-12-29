@@ -8,8 +8,12 @@ const ContactForm = () => {
   console.log(formContactOpen);
   return (
     <div className={`${styles.container} ${formContactOpen ? styles.open : ''}`}>
-      Contact Form!
-      <button onClick={() => toggleFormContactOpen()}>close</button>
+      <div className={styles.buttonContainer}>
+        <button className={styles.closeButton} onClick={() => toggleFormContactOpen()}>&#10005;</button>
+      </div>
+      <div className={styles.formClontainer}>
+        FORM!
+      </div>
     </div>
   );
 };
