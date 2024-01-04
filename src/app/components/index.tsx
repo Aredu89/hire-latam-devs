@@ -4,6 +4,7 @@ import Menu from "./menu/menu.component";
 import Button from "./button/button.component";
 import BenefitCard from "./benefitCard/benefitCard.component";
 import Step from "./step/step.component";
+import Form from "./form/form.component";
 
 export {
   MenuItem,
@@ -11,5 +12,6 @@ export {
   Menu,
   Button,
   BenefitCard,
-  Step
+  Step,
+  Form
 };
