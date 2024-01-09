@@ -8,21 +8,25 @@ import { EFieldType } from '@/app/components/form/form.types';
 const formFields = [
   {
     name: 'name',
+    title: 'Name',
     type: EFieldType.text,
     placeholder: 'Your name goes here...'
   },
   {
     name: 'email',
+    title: 'Email',
     type: EFieldType.email,
     placeholder: 'Your Email here...'
   },
   {
     name: 'company',
+    title: 'Company',
     type: EFieldType.text,
     placeholder: 'The company interested in LATAM devs...'
   },
   {
     name: 'message',
+    title: 'Your message for us',
     type: EFieldType.area,
     placeholder: 'Tell us about your needs...'
   }

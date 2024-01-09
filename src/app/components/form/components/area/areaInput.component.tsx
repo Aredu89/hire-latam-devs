@@ -1,11 +1,21 @@
 import { Field } from "../../form.types";
+import styles from '../../form.module.css';
 
 const AreaInput = ({
   name,
+  title,
   placeholder
 }: Field) => {
   return (
-    <textarea name={name} rows={4} placeholder={placeholder ? placeholder : ''} />
+    <div className={styles.inputContainer}>
+      <label>{title}</label>
+      <textarea
+        name={name}
+        rows={4}
+        placeholder={placeholder ? placeholder : ''}
+        className={styles.input}
+      />
+    </div>
   )
 };
 

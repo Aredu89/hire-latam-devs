@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, { MouseEvent } from 'react';
 
 import { buttonProps } from './button.types';
 import styles from './button.module.css';
@@ -7,15 +7,23 @@ import styles from './button.module.css';
 const Button = ({
   text,
   reverseColors,
-  onClick
+  onClick,
+  isSubmit
 }: buttonProps) => {
   
-  const handleOnClick = () => {
+  const handleOnClick = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     onClick();
   };
   
   return (
-    <button className={`${styles.button} ${reverseColors ? styles.reverse : ''}`} onClick={handleOnClick}>{text}</button>
+    <button
+      type={isSubmit ? 'submit' : 'button'}
+      className={`${styles.button} ${reverseColors ? styles.reverse : ''}`}
+      onClick={handleOnClick}
+    >
+      {text}
+    </button>
   )
 };
 

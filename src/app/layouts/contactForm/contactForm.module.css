@@ -11,6 +11,7 @@
   z-index: 1000;
   transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   border-radius: 50%;
+  overflow: hidden;
 
   background-color: var(--light-background-color);
 }
@@ -24,7 +25,7 @@
 
 .buttonContainer {
   width: 60%;
-  height: 100px;
+  height: 120px;
   display: flex;
   justify-content: end;
   align-items: center;
@@ -50,5 +51,7 @@
 
 .formContainer {
   display: flex;
-  width: 60%;
+  width: 45%;
+  background-color: var(--white-color);
+  border-radius: .5rem;
 }

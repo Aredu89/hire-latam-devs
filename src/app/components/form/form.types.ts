@@ -6,6 +6,7 @@ export enum EFieldType {
 
 export type Field = {
   name: string;
+  title: string;
   placeholder?: string;
 };
 

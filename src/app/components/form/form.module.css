@@ -2,5 +2,33 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 1rem 4rem;
+  padding: 3rem 5rem;
+  color: var(--primary-color);
+  box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.2);
+  border-radius: .5rem;
+  gap: 14px;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 4px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.input {
+  width: 100%;
+  font-family: inherit;
+  padding: 10px 14px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: solid 1px grey;
+  color: var(--font-primary-color);
+}
+
+.input:active,
+.input:focus {
+  border-color: var(--primary-color);
 }
