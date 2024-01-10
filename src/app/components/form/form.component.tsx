@@ -8,6 +8,7 @@ import {
 import { Button } from '..';
 import { EFieldType } from './form.types';
 import styles from './form.module.css';
+import { useForm } from './hooks/useForm.hook';
 
 const fieldsMap = {
   [EFieldType.text]: TextInput,
@@ -18,9 +19,12 @@ const fieldsMap = {
 const Form = ({
   fields
 }: FormProps) => {
+  const {
+    state,
+    handleChange
+  } = useForm({ fields });
 
-  const onSubbmit = () => {};
-
+  const onSubmit = () => {};
   return(
     <form className={styles.form}>
       {fields.map((field) => {
@@ -32,10 +36,11 @@ const Form = ({
             name={field.name}
             title={field.title}
             placeholder={field.placeholder}
+            autocomplete={field.autocomplete}
           />
         );
       })}
-      <Button text='Send Message' onClick={onSubbmit} isSubmit />
+      <Button text='Send Message' onClick={onSubmit} />
     </form>
   )
 };

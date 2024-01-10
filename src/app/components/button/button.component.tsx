@@ -7,8 +7,7 @@ import styles from './button.module.css';
 const Button = ({
   text,
   reverseColors,
-  onClick,
-  isSubmit
+  onClick
 }: buttonProps) => {
   
   const handleOnClick = (e: MouseEvent<HTMLButtonElement>) => {
@@ -18,7 +17,6 @@ const Button = ({
   
   return (
     <button
-      type={isSubmit ? 'submit' : 'button'}
       className={`${styles.button} ${reverseColors ? styles.reverse : ''}`}
       onClick={handleOnClick}
     >

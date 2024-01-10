@@ -10,10 +10,6 @@
 }
 
 .inputContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: start;
-  gap: 4px;
   margin-bottom: 15px;
   text-transform: uppercase;
 }
@@ -26,6 +22,7 @@
   border-radius: 6px;
   border: solid 1px grey;
   color: var(--font-primary-color);
+  margin-top: 6px;
 }
 
 .input:active,

@@ -2,19 +2,23 @@ import { Field } from "../../form.types";
 import styles from '../../form.module.css';
 
 const TextInput = ({
-  name,
   title,
-  placeholder
+  name,
+  placeholder,
+  autocomplete
 }: Field) => {
   return (
     <div className={styles.inputContainer}>
-      <label>{title}</label>
-      <input
-        name={name}
-        type='text'
-        placeholder={placeholder ? placeholder : ''}
-        className={styles.input}
-      />
+      <label>
+        {title}
+        <input
+          name={name}
+          type='text'
+          placeholder={placeholder ? placeholder : ''}
+          className={styles.input}
+          autoComplete={autocomplete || 'off'}
+        />
+      </label>
     </div>
   );
 };

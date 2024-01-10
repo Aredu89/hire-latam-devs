@@ -5,9 +5,11 @@ export enum EFieldType {
 };
 
 export type Field = {
-  name: string;
   title: string;
+  name: string;
   placeholder?: string;
+  required?: boolean;
+  autocomplete?: string;
 };
 
 type FormField = {
