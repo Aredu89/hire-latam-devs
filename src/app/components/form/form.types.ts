@@ -5,17 +5,21 @@ export enum EFieldType {
 };
 
 export type Field = {
-  title: string;
   name: string;
+  title: string;
+  type: EFieldType;
   placeholder?: string;
   required?: boolean;
   autocomplete?: string;
 };
 
-type FormField = {
-  type: EFieldType;
-} & Field;
+export type InputProps = {
+  title: string;
+  name: string;
+  placeholder?: string;
+  autocomplete?: string;
+};
 
 export type FormProps = {
-  fields: Array<FormField>
+  fields: Array<Field>
 };

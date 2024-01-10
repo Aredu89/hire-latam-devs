@@ -3,12 +3,12 @@ import { FormProps } from "./form.types";
 import {
   TextInput,
   AreaInput,
-  EmailInput
+  EmailInput,
+  Submit
 } from './components';
-import { Button } from '..';
 import { EFieldType } from './form.types';
 import styles from './form.module.css';
-import { useForm } from './hooks/useForm.hook';
+import { FormProvider } from './context/form.context';
 
 const fieldsMap = {
   [EFieldType.text]: TextInput,
@@ -19,30 +19,26 @@ const fieldsMap = {
 const Form = ({
   fields
 }: FormProps) => {
-  const {
-    state,
-    handleChange
-  } = useForm({ fields });
-
-  const onSubmit = () => {};
   return(
-    <form className={styles.form}>
-      {fields.map((field) => {
-        const key = uuidv4();
-        const FieldComponent = fieldsMap[field.type];
-        return(
-          <FieldComponent
-            key={key}
-            name={field.name}
-            title={field.title}
-            placeholder={field.placeholder}
-            autocomplete={field.autocomplete}
-          />
-        );
-      })}
-      <Button text='Send Message' onClick={onSubmit} />
-    </form>
-  )
+    <FormProvider fields={fields}>
+      <form className={styles.form}>
+        {fields.map((field) => {
+          const key = uuidv4();
+          const FieldComponent = fieldsMap[field.type];
+          return(
+            <FieldComponent
+              key={key}
+              name={field.name}
+              title={field.title}
+              placeholder={field.placeholder}
+              autocomplete={field.autocomplete}
+            />
+          );
+        })}
+        <Submit />
+      </form>
+    </FormProvider>
+  );
 };
 
 export default Form;

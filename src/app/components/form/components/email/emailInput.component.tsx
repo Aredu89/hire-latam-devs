@@ -1,4 +1,6 @@
-import { Field } from "../../form.types";
+import { useContext } from "react";
+import { FormContext } from "../../context/form.context";
+import { InputProps } from "../../form.types";
 import styles from '../../form.module.css';
 
 const EmailInput = ({
@@ -6,7 +8,11 @@ const EmailInput = ({
   name,
   placeholder,
   autocomplete
-}: Field) => {
+}: InputProps) => {
+  const { getValue, handleChange } = useContext(FormContext);
+  const value = getValue(name);
+  const onChange = handleChange(name);
+  
   return (
     <div className={styles.inputContainer}>
       <label>
@@ -17,6 +23,8 @@ const EmailInput = ({
           placeholder={placeholder ? placeholder : ''}
           className={styles.input}
           autoComplete={autocomplete || 'off'}
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
         />
       </label>
     </div>
