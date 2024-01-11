@@ -1,4 +1,7 @@
 .footerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: var(--padding-section);
   background-color: var(--primary-color-dark);
   color: white;

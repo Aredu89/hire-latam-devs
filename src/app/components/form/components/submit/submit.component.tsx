@@ -7,8 +7,9 @@ const Submit = () => {
 
   const onSubmit = () => {
     console.log('---on submit---');
-    if(checkErrors()) {
-      console.log('There are errors')
+    const thereAreErrors = checkErrors();
+    if(thereAreErrors) {
+      console.log('There are errors!')
     } else {
       console.log('No errors');
       console.log('Form STATE::: ', state);

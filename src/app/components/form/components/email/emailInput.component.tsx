@@ -9,8 +9,9 @@ const EmailInput = ({
   placeholder,
   autocomplete
 }: InputProps) => {
-  const { getValue, handleChange } = useContext(FormContext);
+  const { getValue, getError, handleChange } = useContext(FormContext);
   const value = getValue(name);
+  const error = getError(name);
   const onChange = handleChange(name);
   
   return (
@@ -21,11 +22,14 @@ const EmailInput = ({
           name={name}
           type='email'
           placeholder={placeholder ? placeholder : ''}
-          className={styles.input}
+          className={`${styles.input} ${error ? styles.error : ''}`}
           autoComplete={autocomplete || 'off'}
           value={value}
           onChange={(e) => onChange(e.target.value)}
         />
+        {error && (
+          <div className={styles.errorMessage}>{error}</div>
+        )}
       </label>
     </div>
   )

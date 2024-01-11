@@ -16,11 +16,11 @@ export const FormContext = createContext<{
   state: ObjectType;
   getError: (name: string) => string;
 }>({
-  getValue: (name: string) => '',
-  handleChange: (name: string) => (value: string) => null,
+  getValue: () => '',
+  handleChange: () => () => null,
   checkErrors: () => false,
   state: {},
-  getError: (name: string) => ''
+  getError: () => ''
 });
 
 export const FormProvider = ({fields, children}: {fields: Array<Field>, children: ReactNode}) => {
@@ -54,21 +54,28 @@ export const FormProvider = ({fields, children}: {fields: Array<Field>, children
 
   const checkErrors = () => {
     let errorExists = false;
-    const addErros: ObjectType = {};
+    const addErrors: ObjectType = {};
     fields.forEach((field) => {
       if(field.required) {
         if(!formState[field.name]) {
-          addErros[field.name] = 'This field is required';
+          addErrors[field.name] = 'This field is required';
           errorExists = true;
         }
       }
-      if(field.type === EFieldType.email) {
+      if(
+        field.type === EFieldType.email &&
+        !addErrors[field.name]
+        ) {
         if(!validator.validate(formState[field.name])) {
-          addErros[field.name] = 'The format of the email is incorrect';
+          addErrors[field.name] = 'The format of the email is incorrect';
           errorExists = true;
         }
       }
     });
+    setErrorsState((prev) => ({
+      ...prev,
+      ...addErrors
+    }));
     return errorExists;
   };
 
