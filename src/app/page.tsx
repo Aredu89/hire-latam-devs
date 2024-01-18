@@ -10,6 +10,7 @@ import {
 } from './layouts';
 import { Rubik } from 'next/font/google';
 import { ContactFormProvider } from './context/contactForm.context';
+import { CollapsedMenuProvider } from './context/collapsedMenu.context';
 
 const rubikFont = Rubik({ subsets: ['latin'] });
 
@@ -17,7 +18,9 @@ export default function Home() {
   return (
     <main className={rubikFont.className}>
       <ContactFormProvider>
-        <Header />
+        <CollapsedMenuProvider>
+          <Header />
+        </CollapsedMenuProvider>
         <MainSection />
         <TheBenefits />
         <TheProcess />

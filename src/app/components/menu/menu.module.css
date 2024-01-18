@@ -1,4 +1,17 @@
-.menuContainer {
+.itemsContainer {
   display: flex;
   gap: 1.8rem;
 }
+
+.collapseButtonContainer {
+  display: none;
+}
+
+@media only screen and (max-width: 1050px) {
+  .itemsContainer {
+    display: none;
+  }
+  .collapseButtonContainer {
+    display: flex;
+  }
+};

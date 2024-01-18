@@ -7,6 +7,9 @@
   --primary-color-dark: #131c63;
   --font-primary-color: rgba(0, 0, 0, 0.8);
   --error-color: #ce4646;
+  --tablet-bp: 1050px;
+  --mobile-landscape-bp: 750px;
+  --mobile-bp: 490px;
 }
 
 * {

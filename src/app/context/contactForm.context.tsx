@@ -26,5 +26,5 @@ export const ContactFormProvider = ({ children }: { children: ReactNode}) => {
     toggleFormContactOpen
   };
 
-  return <ContactFormContext.Provider value={value}>{children}</ContactFormContext.Provider>
+  return <ContactFormContext.Provider value={value}>{children}</ContactFormContext.Provider>;
 };
