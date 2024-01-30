@@ -4,7 +4,6 @@
   border-radius: .5rem;
 }
 
-
 .animation.right {
   animation-name: moveInRight;
   animation-duration: .8s;
