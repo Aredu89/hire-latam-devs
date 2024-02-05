@@ -4,7 +4,8 @@ import {
   TextInput,
   AreaInput,
   EmailInput,
-  Submit
+  Submit,
+  CloseButton
 } from './components';
 import { EFieldType } from './form.types';
 import styles from './form.module.css';
@@ -22,6 +23,7 @@ const Form = ({
   return(
     <FormProvider fields={fields}>
       <form className={styles.form}>
+        <CloseButton />
         {fields.map((field) => {
           const key = uuidv4();
           const FieldComponent = fieldsMap[field.type];

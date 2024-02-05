@@ -41,12 +41,9 @@ const formFields = [
 ];
 
 const ContactForm = () => {
-  const { formContactOpen, toggleFormContactOpen } = useContactForm();
+  const { formContactOpen } = useContactForm();
   return (
     <div className={`${styles.container} ${formContactOpen ? styles.open : ''}`}>
-      <div className={styles.buttonContainer}>
-        <button className={styles.closeButton} onClick={() => toggleFormContactOpen()}>&#10005;</button>
-      </div>
       <div className={styles.formContainer}>
         <Form fields={formFields} />
       </div>

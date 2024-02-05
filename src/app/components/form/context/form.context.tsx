@@ -15,12 +15,14 @@ export const FormContext = createContext<{
   checkErrors: () => boolean;
   state: ObjectType;
   getError: (name: string) => string;
+  resetForm: () => void;
 }>({
   getValue: () => '',
   handleChange: () => () => null,
   checkErrors: () => false,
   state: {},
-  getError: () => ''
+  getError: () => '',
+  resetForm: () => null
 });
 
 export const FormProvider = ({fields, children}: {fields: Array<Field>, children: ReactNode}) => {
@@ -42,6 +44,11 @@ export const FormProvider = ({fields, children}: {fields: Array<Field>, children
       ...prev,
       [name]: ''
     }));
+  };
+
+  const resetForm = () => {
+    setFormState(initialState);
+    setErrorsState(initialState);
   };
 
   const getValue = (name: string) => {
@@ -84,7 +91,8 @@ export const FormProvider = ({fields, children}: {fields: Array<Field>, children
     handleChange,
     checkErrors,
     state: formState,
-    getError
+    getError,
+    resetForm
   };
 
   return <FormContext.Provider value={value}>{children}</FormContext.Provider>

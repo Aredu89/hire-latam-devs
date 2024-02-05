@@ -16,6 +16,7 @@ const Submit = () => {
     } else {
       const body = JSON.stringify(state);
       setLoading(true);
+      setError(false);
       try {
         const response = await fetch('/api/contact', {
           method: 'POST',
