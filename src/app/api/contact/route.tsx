@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
   });
 
   try {
-    const mail = await transporter.sendMail({
+    await transporter.sendMail({
       from: username,
       to: myEmail,
       replyTo: email,
@@ -43,7 +43,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: "Success: email was sent" });
   } catch (error) {
       console.log(error)
-      return NextResponse.json({ message: "COULD NOT SEND MESSAGE" }, { status: 500 });
+      return NextResponse.json({ message: "Error: Could not send message" }, { status: 500 });
   };
 };
 

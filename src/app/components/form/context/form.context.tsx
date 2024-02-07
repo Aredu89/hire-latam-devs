@@ -16,13 +16,17 @@ export const FormContext = createContext<{
   state: ObjectType;
   getError: (name: string) => string;
   resetForm: () => void;
+  success: boolean;
+  setSuccess: (b: boolean) => void;
 }>({
   getValue: () => '',
   handleChange: () => () => null,
   checkErrors: () => false,
   state: {},
   getError: () => '',
-  resetForm: () => null
+  resetForm: () => null,
+  success: false,
+  setSuccess: () => null
 });
 
 export const FormProvider = ({fields, children}: {fields: Array<Field>, children: ReactNode}) => {
@@ -34,6 +38,7 @@ export const FormProvider = ({fields, children}: {fields: Array<Field>, children
   }, {});
   const [formState, setFormState] = useState(initialState);
   const [errorsState, setErrorsState] = useState(initialState);
+  const [success, setSuccess] = useState(false);
 
   const handleChange = (name: string) => (value: string) => {
     setFormState((prev) => ({
@@ -49,6 +54,7 @@ export const FormProvider = ({fields, children}: {fields: Array<Field>, children
   const resetForm = () => {
     setFormState(initialState);
     setErrorsState(initialState);
+    setSuccess(false);
   };
 
   const getValue = (name: string) => {
@@ -92,7 +98,9 @@ export const FormProvider = ({fields, children}: {fields: Array<Field>, children
     checkErrors,
     state: formState,
     getError,
-    resetForm
+    resetForm,
+    success,
+    setSuccess
   };
 
   return <FormContext.Provider value={value}>{children}</FormContext.Provider>

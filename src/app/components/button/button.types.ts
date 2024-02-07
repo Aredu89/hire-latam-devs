@@ -1,5 +1,7 @@
+import { ReactNode } from "react";
+
 export type buttonProps = {
-  text: string;
+  text: string | ReactNode;
   reverseColors?: boolean;
   onClick: () => void;
   isSubmit?: boolean;

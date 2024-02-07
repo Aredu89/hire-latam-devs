@@ -1,6 +1,6 @@
 'use client'
 
-import { useContext } from 'react';
+import { useContext, MouseEvent } from 'react';
 import styles from './closeButton.module.css';
 import { useContactForm } from '@/app/context/contactForm.context';
 import { FormContext } from "../../context/form.context";
@@ -9,7 +9,8 @@ const CloseButton = () => {
   const { toggleFormContactOpen } = useContactForm();
   const { resetForm } = useContext(FormContext);
 
-  const handleClose = () => {
+  const handleClose = (e: MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     toggleFormContactOpen();
     setTimeout(() => resetForm(), 1000);
   };

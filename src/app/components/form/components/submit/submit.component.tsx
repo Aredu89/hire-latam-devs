@@ -3,9 +3,11 @@
 import { useContext, useState } from "react";
 import { FormContext } from "../../context/form.context";
 import { Button } from '../../..';
+import PulseLoader from 'react-spinners/PulseLoader';
+import styles from './submit.module.css';
 
 const Submit = () => {
-  const { checkErrors, state } = useContext(FormContext);
+  const { checkErrors, state, setSuccess, success } = useContext(FormContext);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
 
@@ -32,6 +34,8 @@ const Submit = () => {
         }
         const responseData = await response.json();
         console.log(responseData['message']);
+        setLoading(false);
+        setSuccess(true);
       } catch (error) {
         setLoading(false);
         setError(true);
@@ -40,8 +44,16 @@ const Submit = () => {
     };
   };
 
+  if(loading) {
+    return <div className={styles.spinnerContainer}><PulseLoader color='#273BDF' /></div>;
+  };
+
   return(
-    <Button text='Send Message' onClick={onSubmit} />
+    <>
+      {success && <span className={styles.success}>Message sent! We will contact you soon.</span>}
+      <Button text='Send Message' onClick={onSubmit} />
+      {error && <span className={styles.error}>There was an error sending the message. Please try again later</span>}
+    </>
   );
 };
 
