@@ -6,6 +6,7 @@ import BenefitCard from "./benefitCard/benefitCard.component";
 import Step from "./step/step.component";
 import Form from "./form/form.component";
 import CollapseButton from "./collapseButton/collapseButton.component";
+import CollapseMenu from "./collapseMenu/collapseMenu.component";
 
 export {
   MenuItem,
@@ -15,5 +16,6 @@ export {
   BenefitCard,
   Step,
   Form,
-  CollapseButton
+  CollapseButton,
+  CollapseMenu
 };

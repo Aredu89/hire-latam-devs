@@ -4,6 +4,7 @@
   align-items: center;
   gap: .5rem;
   padding: var(--padding-section);
+  height: var(--header-height);
   box-shadow: 1px 0px 53px -17px rgba(0,0,0,0.8);
   background-color: #fff;
   position: fixed;
