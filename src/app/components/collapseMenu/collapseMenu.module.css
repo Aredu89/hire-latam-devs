@@ -1,4 +1,4 @@
-@value tablet-bp, collapse-menu-item-height from '../../styles/variables.module.css';
+@value tablet-bp from '../../styles/variables.module.css';
 
 .container {
     position: fixed;
@@ -17,7 +17,7 @@
 
 .container .menuItem {
     width: 100%;
-    height: collapse-menu-item-height;
+    height: var(--collapse-menu-item-height);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,7 +31,7 @@
 
 @media tablet-bp {
     .open {
-        height: calc((5 * collapse-menu-item-height) + 20px);
+        height: calc((5 * var(--collapse-menu-item-height)) + 20px);
         padding: 10px 0px;
     }
 }

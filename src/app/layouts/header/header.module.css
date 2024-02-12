@@ -1,3 +1,5 @@
+@value big-screen, tablet-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .navContainer {
   display: flex;
   justify-content: space-between;
@@ -11,4 +13,28 @@
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+@media big-screen {
+  .navContainer {
+    padding: var(--padding-section-big-screen);
+  }
+}
+
+@media tablet-bp {
+  .navContainer {
+    padding: var(--padding-section-tablet);
+  }
+}
+
+@media mobile-landscape-bp {
+  .navContainer {
+    padding: var(--padding-section-mobile-landscape);
+  }
+}
+
+@media mobile-bp {
+  .navContainer {
+    padding: var(--padding-section-mobile);
+  }
 }

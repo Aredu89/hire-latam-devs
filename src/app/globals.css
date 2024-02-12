@@ -9,6 +9,13 @@
   --error-color: #ce4646;
   --success-color: #1a7329;
   --header-height: 116px;
+  --collapse-menu-item-height: 40px;
+
+  /* Responsive values */
+  --padding-section-big-screen: 2.5rem 18vw;
+  --padding-section-tablet: 2.5rem 7rem;
+  --padding-section-mobile-landscape: 2.3rem 5rem;
+  --padding-section-mobile: 2.1rem 3rem;
 }
 
 * {

@@ -1,5 +1,5 @@
+@value big-screen: only screen and (min-width: 1450px);
 @value tablet-landscape-bp: only screen and (max-width: 1320px);
 @value tablet-bp: only screen and (max-width: 1210px);
 @value mobile-landscape-bp: only screen and (max-width: 750px);
 @value mobile-bp: only screen and (max-width: 490px);
-@value collapse-menu-item-height: 40px;
