@@ -2,3 +2,4 @@
 @value tablet-bp: only screen and (max-width: 1210px);
 @value mobile-landscape-bp: only screen and (max-width: 750px);
 @value mobile-bp: only screen and (max-width: 490px);
+@value collapse-menu-item-height: 40px;

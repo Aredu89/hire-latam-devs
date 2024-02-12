@@ -1,19 +1,37 @@
-@value tablet-bp from '../../styles/variables.module.css';
+@value tablet-bp, collapse-menu-item-height from '../../styles/variables.module.css';
 
 .container {
     position: fixed;
     background-color: var(--white-color);
     width: 100%;
     top: var(--header-height);
+    padding: 0px;
     display: flex;
+    flex-direction: column;
     height: 0px;
     transition: all .5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     box-shadow: 1px 0px 53px -17px rgba(0,0,0,0.8);
     overflow: hidden;
+    z-index: 1;
+}
+
+.container .menuItem {
+    width: 100%;
+    height: collapse-menu-item-height;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.contact {
+    color: var(--primary-color);
+    font-weight: 600;
 }
 
 @media tablet-bp {
     .open {
-        height: 50px;
+        height: calc((5 * collapse-menu-item-height) + 20px);
+        padding: 10px 0px;
     }
 }
