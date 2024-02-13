@@ -1,3 +1,5 @@
+@value big-screen, tablet-bp, tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .technologiesContainer {
   display: flex;
   flex-direction: column;
@@ -27,6 +29,61 @@
   animation-name: moveInBottom;
   animation-duration: .8s;
   animation-timing-function: ease-in-out;
+}
+
+/* --------- Media Queries ----------- */
+
+@media big-screen {
+  .technologiesContainer {
+    padding: var(--padding-section-big-screen);
+  }
+}
+
+@media tablet-bp {
+  .technologiesContainer {
+    padding: var(--padding-section-tablet);
+  }
+}
+
+@media tablet-mini-bp {
+  .technologiesContainer h1 {
+    font-size: 1.5rem;
+  }
+
+  .logosContainer {
+    gap: .8rem;
+    margin-top: 3rem;
+  }
+
+  .image {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media mobile-landscape-bp {
+  .logosContainer {
+    grid-template-columns: repeat(6, minmax(3rem, 1fr));
+    gap: .6rem;
+    margin-top: 2.5rem;
+  }
+}
+
+@media mobile-bp {
+  .technologiesContainer h1 {
+    font-size: 1.2rem;
+  }
+
+  .logosContainer {
+    grid-template-columns: repeat(5, minmax(3rem, 1fr));
+    gap: .3rem;
+    margin-top: 2rem;
+  }
+
+  .image {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 /* -----Animations----- */

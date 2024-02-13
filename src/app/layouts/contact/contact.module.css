@@ -1,3 +1,5 @@
+@value big-screen, tablet-bp, tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .contactSectionContainer {
   color: #fff;
   background-color: var(--primary-color);
@@ -26,6 +28,54 @@
   animation-name: moveInBottom;
   animation-duration: 1.5s;
   animation-timing-function: ease-in-out;
+}
+
+/* --------- Media Queries ----------- */
+
+@media big-screen {
+  .contactSectionContainer {
+    padding: var(--padding-section-big-screen);
+  }
+}
+
+@media tablet-bp {
+  .contactSectionContainer {
+    padding: var(--padding-section-tablet);
+  }
+
+  .contactSectionContainer h2 {
+    font-size: 2.5rem;
+  }
+
+  .contactSectionContainer button {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media tablet-mini-bp {
+  .contactSectionContainer h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media mobile-landscape-bp {
+  .contactSectionContainer {
+    padding: var(--padding-section-mobile-landscape);
+  }
+}
+
+@media mobile-bp {
+  .contactSectionContainer {
+    padding: var(--padding-section-mobile);
+  }
+
+  .contactSectionContainer h2 {
+    font-size: 1.2rem;
+  }
+
+  .contactSectionContainer button {
+    margin-bottom: 1rem;
+  }
 }
 
 /* ----- Animations ----- */

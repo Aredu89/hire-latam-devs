@@ -40,6 +40,7 @@ const Technologies = () => {
             <Tooltip content={alt}>
               <Image
                 src={slug}
+                className={styles.image}
                 width={70}
                 height={70}
                 alt={alt}

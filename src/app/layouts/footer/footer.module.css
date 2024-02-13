@@ -1,3 +1,5 @@
+@value big-screen, tablet-bp, tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .footerContainer {
   display: flex;
   justify-content: space-between;
@@ -26,4 +28,37 @@
   display: flex;
   align-items: flex-end;
   padding-top: 2rem;
+}
+
+/* --------- Media Queries ----------- */
+
+@media big-screen {
+  .footerContainer {
+    padding: var(--padding-section-big-screen);
+  }
+}
+
+@media tablet-bp {
+  .footerContainer {
+    padding: var(--padding-section-tablet);
+  }
+}
+
+@media tablet-mini-bp {
+  .registerSection {
+    font-size: .8rem;
+    padding-top: 1rem;
+  }
+}
+
+@media mobile-landscape-bp {
+  .footerContainer {
+    padding: var(--padding-section-mobile-landscape);
+  }
+}
+
+@media mobile-bp {
+  .footerContainer {
+    flex-direction: column;
+  }
 }
