@@ -2,9 +2,9 @@ import { NextResponse, NextRequest } from 'next/server';
 import { Resend } from 'resend';
 // const nodemailer = require('nodemailer');
 
-export const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY!);
+const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY!);
 
-// We are using an mail API service called Resend
+// We are using a mail API service called Resend
 // To avoid not being able to send an email when connected to a VPN
 
 export async function POST(request: NextRequest) {
@@ -33,7 +33,6 @@ export async function POST(request: NextRequest) {
         <p>Message: ${message} </p>
       `
     });
-    console.log('Response::: ', response);
     if(!response.error) {
       return NextResponse.json({ message: "Success: email was sent" });
     } else {
@@ -79,12 +78,12 @@ export async function POST(request: NextRequest) {
   // };
 };
 
-export const config = {
-  api: {
-    bodyParser: {
-      sizeLimit: '1mb',
-    },
-  },
-  // Specifies the maximum allowed duration for this function to execute (in seconds)
-  maxDuration: 5,
-};
+// export const config = {
+//   api: {
+//     bodyParser: {
+//       sizeLimit: '1mb',
+//     },
+//   },
+//   // Specifies the maximum allowed duration for this function to execute (in seconds)
+//   maxDuration: 5,
+// };
