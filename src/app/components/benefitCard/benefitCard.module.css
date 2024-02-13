@@ -1,3 +1,5 @@
+@value tablet-mini-bp, mobile-landscape-bp from '../../styles/variables.module.css';
+
 .benefitCardContainer {
   box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.2);
   padding: 1.5rem 2.8rem;
@@ -32,6 +34,43 @@
 
 .description {
   font-weight: 300;
+}
+
+/* --------- Media Queries ----------- */
+
+@media tablet-mini-bp {
+  .benefitCardContainer {
+    padding: 1.2rem 2.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .title > img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media mobile-landscape-bp {
+  .benefitCardContainer {
+    padding: 1rem 2rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    gap: .5rem;
+  }
+
+  .title > img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .description {
+    font-size: .8rem;
+  }
 }
 
 /* ----- Animations ------ */
