@@ -11,9 +11,10 @@ const MainSection = () => (
       <p>Hiring staff from LATAM can save you up to 35% in salaries.</p>
     </h2>
     <h5>Make your hiring process smoother with our help.</h5>
-    <div className={styles.latamMap}>
+    <div className={styles.latamMapContainer}>
       <Image
         src="/latam-map.png"
+        className={styles.latamMap}
         width={400}
         height={400}
         alt="LATAM map"
