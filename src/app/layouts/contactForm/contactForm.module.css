@@ -1,3 +1,5 @@
+@value tablet-bp, tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .container {
   height: 0;
   width: 0;
@@ -30,4 +32,30 @@
   background-color: var(--white-color);
   border-radius: .5rem;
   margin: 140px 0px;
+}
+
+/* --------- Media Queries ----------- */
+
+@media tablet-bp {
+  .formContainer {
+    width: 55%;
+  }
+}
+
+@media tablet-mini-bp {
+  .formContainer {
+    width: 65%;
+  }
+}
+
+@media mobile-landscape-bp {
+  .formContainer {
+    width: 80%;
+  }
+}
+
+@media mobile-bp {
+  .formContainer {
+    width: 90%;
+  }
 }

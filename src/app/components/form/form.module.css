@@ -1,3 +1,5 @@
+@value tablet-bp, tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .form {
   display: flex;
   flex-direction: column;
@@ -41,4 +43,30 @@
   text-transform: initial;
   color: var(--error-color);
   font-weight: 300;
+}
+
+/* --------- Media Queries ----------- */
+
+@media tablet-bp {
+  .form {
+    padding: 2.5rem 4rem;
+  }
+}
+
+@media tablet-mini-bp {
+  .form {
+    padding: 2rem 3.5rem;
+  }
+}
+
+@media mobile-landscape-bp {
+  .form {
+    padding: 1.5rem 2.8rem;
+  }
+}
+
+@media mobile-bp {
+  .form {
+    padding: .5rem 1rem;
+  }
 }
