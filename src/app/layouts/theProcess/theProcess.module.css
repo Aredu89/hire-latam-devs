@@ -1,3 +1,5 @@
+@value big-screen, tablet-bp, tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .processContainer {
   display: flex;
   flex-direction: column;
@@ -18,4 +20,47 @@
 
 .stepsContainer {
   width: 90%;
+}
+
+/* --------- Media Queries ----------- */
+
+@media big-screen {
+  .stepsContainer {
+    width: 75%;
+  }
+}
+
+@media tablet-bp {
+  .processContainer {
+    padding: 10rem 8rem;
+  }
+
+  .processContainer h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
+}
+
+@media tablet-mini-bp {
+  .processContainer h1 {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+
+@media mobile-landscape-bp {
+  .processContainer {
+    padding: 11rem 5rem;
+  }
+}
+
+@media mobile-bp {
+  .processContainer {
+    padding: 10rem 3rem;
+  }
+
+  .processContainer h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+  }
 }

@@ -1,3 +1,5 @@
+@value tablet-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .stepContainer {
   display: grid;
   grid-template-columns: 35% 1fr;
@@ -11,7 +13,7 @@
 
 .title {
   padding-left: 1rem;
-  padding-bottom: .5rem;
+  padding-bottom: .4rem;
   align-self: end;
 }
 
@@ -58,6 +60,136 @@
 .description {
   padding-left: 1rem;
   font-size: 1.3rem;
+}
+
+/* --------- Media Queries ----------- */
+@media tablet-bp {
+  .number.small {
+    font-size: 5rem;
+  }
+  
+  .number.medium {
+    font-size: 6rem;
+  }
+  
+  .number.large {
+    font-size: 7rem;
+  }
+  
+  .number.extraLarge {
+    font-size: 8rem;
+  }
+
+  .title {
+    padding-top: 1.2rem;
+    padding-bottom: .3rem;
+  }
+
+  .title.small {
+    font-size: 1.8rem;
+  }
+  
+  .title.medium {
+    font-size: 2.2rem;
+  }
+  
+  .title.large {
+    font-size: 2.8rem;
+  }
+  
+  .title.extraLarge {
+    font-size: 3.2rem;
+  }
+
+  .description {
+    font-size: 1.2rem;
+  }
+}
+
+@media mobile-landscape-bp {
+  .number.small {
+    font-size: 3.8rem;
+  }
+  
+  .number.medium {
+    font-size: 4.8rem;
+  }
+  
+  .number.large {
+    font-size: 5.8rem;
+  }
+  
+  .number.extraLarge {
+    font-size: 6.8rem;
+  }
+
+  .title {
+    padding-top: 1rem;
+    padding-bottom: .2rem;
+  }
+
+  .title.small {
+    font-size: 1.5rem;
+  }
+  
+  .title.medium {
+    font-size: 2rem;
+  }
+  
+  .title.large {
+    font-size: 2.5rem;
+  }
+  
+  .title.extraLarge {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+}
+
+@media mobile-bp {
+  .number.small {
+    font-size: 2rem;
+  }
+  
+  .number.medium {
+    font-size: 3rem;
+  }
+  
+  .number.large {
+    font-size: 4rem;
+  }
+  
+  .number.extraLarge {
+    font-size: 5rem;
+  }
+
+  .title {
+    padding-top: .8rem;
+    padding-bottom: .1rem;
+  }
+
+  .title.small {
+    font-size: 1rem;
+  }
+  
+  .title.medium {
+    font-size: 1.5rem;
+  }
+  
+  .title.large {
+    font-size: 1.8rem;
+  }
+  
+  .title.extraLarge {
+    font-size: 2rem;
+  }
+
+  .description {
+    font-size: .8rem;
+  }
 }
 
 /* -------ANIMATIONS------- */
