@@ -10,7 +10,7 @@ const menuItems = [
   {
     id: 1,
     title: 'Home',
-    slug: '/'
+    slug: '#'
   },
   {
     id: 2,
