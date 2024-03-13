@@ -1,7 +1,6 @@
 'use client'
 
 import React, { MouseEvent } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
 import { menuItem } from './menu-item.types';
@@ -19,7 +18,7 @@ const MenuItem = ({
   };
 
   return(
-    <Link className={styles.menuItem} href={slug} onClick={handleLinkClick} replace>{title}</Link>
+    <a className={styles.menuItem} href={slug} onClick={handleLinkClick}>{title}</a>
   )
 };
 
