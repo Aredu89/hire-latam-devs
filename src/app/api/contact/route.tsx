@@ -10,7 +10,6 @@ const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY!);
 export async function POST(request: NextRequest) {
   // const username = process.env.NEXT_PUBLIC_EMAIL_USERNAME;
   // const password = process.env.NEXT_PUBLIC_EMAIL_PASSWORD;
-  const myEmail = process.env.NEXT_PUBLIC_PERSONAL_EMAIL || '';
   const workEmail = process.env.NEXT_PUBLIC_HLD_EMAIL || '';
 
   const reqData = await request.json();
@@ -24,7 +23,7 @@ export async function POST(request: NextRequest) {
   try {
     const response = await resend.emails.send({
       from: workEmail,
-      to: [myEmail],
+      to: [workEmail],
       subject: `HLD - Contact from website: ${email}`,
       html: `
         <p>Name: ${name} </p>
