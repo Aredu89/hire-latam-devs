@@ -8,7 +8,7 @@ const MainSection = () => (
     <h4>Find top-tier Software Engineers in Latin America</h4>
     <h2>
       <p>Save money on development costs:</p>
-      <p>Hiring staff from LATAM can save you up to 35% in salaries.</p>
+      <p>Hiring staff from LATAM can save you more than 40% in salaries.</p>
     </h2>
     <h5>Make your hiring process smoother with our help.</h5>
     <div className={styles.latamMapContainer}>
