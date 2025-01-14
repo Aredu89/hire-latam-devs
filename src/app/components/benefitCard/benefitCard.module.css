@@ -32,8 +32,19 @@
   filter: invert(48%) sepia(87%) saturate(452%) hue-rotate(156deg) brightness(97%) contrast(92%);
 }
 
-.description {
-  font-weight: 300;
+.descriptionContainer {
+  display: flex;
+  font-weight: 600;
+  opacity: .8;
+  margin-bottom: 15px;
+}
+
+.descriptionContainer .checkMark {
+  min-width: 30px;
+}
+
+.descriptionContainer .description {
+  flex-grow: 1;
 }
 
 /* --------- Media Queries ----------- */

@@ -27,7 +27,7 @@
 
 .sectionContainer h5 {
   font-size: 1.5rem;
-  font-weight: 200;
+  opacity: .8;
   animation-name: moveInLeft;
   animation-duration: .8s;
   animation-timing-function: ease-in-out;

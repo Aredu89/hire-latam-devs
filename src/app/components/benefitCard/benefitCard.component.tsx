@@ -36,7 +36,12 @@ const BenefitCard = ({title, description, rightAlignment, iconSlug}: benefitCard
         />}
         {title}
       </h3>
-      {description.map((text, indx) => (<p key={indx} className={styles.description}>{text}</p>))}
+      {description.map((text, indx) => (
+        <div key={indx} className={styles.descriptionContainer}>
+          <div className={styles.checkMark}>&#10003;</div>
+          <div className={styles.description}>{text}</div>
+        </div>
+      ))}
     </div>
   );
 };
