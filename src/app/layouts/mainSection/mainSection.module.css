@@ -20,6 +20,7 @@
 
 .sectionContainer h2 {
   font-size: 3rem;
+  font-weight: 600;
   animation-name: moveInLeft;
   animation-duration: .8s;
   animation-timing-function: ease-in-out;
