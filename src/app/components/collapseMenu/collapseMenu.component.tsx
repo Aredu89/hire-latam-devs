@@ -9,7 +9,7 @@ const CollapseMenu = ({ items, open }: { items: menuItem[], open: boolean }) => 
     const { toggleFormContactOpen } = useContactForm();
 
     return (
-        <div className={`${styles.container} ${open ? styles.open : ''}`}>
+        <nav className={`${styles.container} ${open ? styles.open : ''}`}>
             {items.map(item => (
                 <div key={uuidv4()}>
                     <a className={styles.menuItem} href={item.slug} onClick={toggleOpen}>{item.title}</a>
@@ -25,7 +25,7 @@ const CollapseMenu = ({ items, open }: { items: menuItem[], open: boolean }) => 
             >
                 Contact Us!
             </div>
-        </div>
+        </nav>
     );
 };
 

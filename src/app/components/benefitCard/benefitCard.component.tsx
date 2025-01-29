@@ -31,7 +31,7 @@ const BenefitCard = ({title, description, rightAlignment, iconSlug}: benefitCard
           src={iconSlug}
           width={40}
           height={40}
-          alt="Icon"
+          alt={title}
           priority
         />}
         {title}

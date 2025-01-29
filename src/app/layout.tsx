@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Hire Latam Devs',
+  title: 'HireLatamDevs',
   description: 'Hire the best talent in Latin America'
 }
 

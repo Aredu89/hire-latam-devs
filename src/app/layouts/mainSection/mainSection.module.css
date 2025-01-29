@@ -73,7 +73,7 @@
 
   .latamMap {
     width: 280px;
-    height: 280px;
+    height: 315px; /* 280 * 1.125 */
   }
 }
 
@@ -98,7 +98,7 @@
 
   .latamMap {
     width: 150px;
-    height: 150px;
+    height: 169px;
   }
 }
 
@@ -130,7 +130,7 @@
 
   .latamMap {
     width: 130px;
-    height: 130px;
+    height: 146px;
   }
 }
 

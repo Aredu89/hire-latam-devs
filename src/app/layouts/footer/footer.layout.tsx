@@ -6,7 +6,7 @@ import styles from './footer.module.css';
 
 const Footer = () => {
   return(
-    <div className={styles.footerContainer}>
+    <footer className={styles.footerContainer}>
       <section className={styles.infoSection}>
         <Logo footer />
       </section>
@@ -14,7 +14,7 @@ const Footer = () => {
         <h4>hello@hirelatamdevs.com</h4>
       </div>
       <section className={styles.registerSection}>HireLatamDevs &copy; 2024</section>
-    </div>
+    </footer>
   )
 };
 
