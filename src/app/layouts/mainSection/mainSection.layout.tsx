@@ -13,7 +13,7 @@ const MainSection = () => (
       <h5>Make your hiring process smoother with our help.</h5>
       <div className={styles.latamMapContainer}>
         <Image
-          src="/latam-map.png"
+          src="/latam-map.webp"
           className={styles.latamMap}
           width={400}
           height={450}
