@@ -10,7 +10,7 @@ const formFields = [
     name: 'name',
     title: 'Name',
     type: EFieldType.text,
-    placeholder: 'Your name goes here...',
+    placeholder: 'Full name...',
     required: true,
     autocomplete: 'name'
   },
@@ -18,7 +18,7 @@ const formFields = [
     name: 'email',
     title: 'Email',
     type: EFieldType.email,
-    placeholder: 'Your Email here...',
+    placeholder: 'Email...',
     required: true,
     autocomplete: 'email'
   },
@@ -26,7 +26,7 @@ const formFields = [
     name: 'company',
     title: 'Company',
     type: EFieldType.text,
-    placeholder: 'The company interested in LATAM devs...',
+    placeholder: 'Your Company name...',
     required: true,
     autocomplete: 'organization'
   },

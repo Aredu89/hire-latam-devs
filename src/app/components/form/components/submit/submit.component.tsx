@@ -49,11 +49,11 @@ const Submit = () => {
   };
 
   return(
-    <>
-      {success && <span className={styles.success}>Message sent! We will contact you soon.</span>}
+    <div className={styles.submitButtonContainer}>
+      {success && <span className={styles.success}>Message sent! We&apos;ll be in touch soon.</span>}
       <Button text='Send Message' onClick={onSubmit} />
-      {error && <span className={styles.error}>There was an error sending the message. Please try again later</span>}
-    </>
+      {error && <span className={styles.error}>There was an error sending the message. Please try again</span>}
+    </div>
   );
 };
 

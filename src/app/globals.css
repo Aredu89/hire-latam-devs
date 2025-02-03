@@ -8,8 +8,8 @@
   --font-primary-color: rgba(0, 0, 0, 0.8);
   --error-color: #ce4646;
   --success-color: #1a7329;
-  --header-height: 116px;
-  --collapse-menu-item-height: 40px;
+  --header-height: 90px;
+  --collapse-menu-item-height: 45px;
 
   /* Responsive values */
   --padding-section-big-screen: 2.5rem 18vw;

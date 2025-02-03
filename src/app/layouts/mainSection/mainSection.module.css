@@ -6,7 +6,7 @@
   row-gap: 3.5rem;
   column-gap: 1rem;
   padding: var(--padding-section);
-  margin-top: 115px;
+  margin-top: var(--header-height);
 }
 
 .sectionContainer h4 {
