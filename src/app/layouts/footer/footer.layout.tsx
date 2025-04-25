@@ -6,20 +6,15 @@ import styles from './footer.module.css';
 
 const Footer = () => {
   return(
-    <div className={styles.footerContainer}>
+    <footer className={styles.footerContainer}>
       <section className={styles.infoSection}>
         <Logo footer />
-        {/* <div className={styles.infoItem}>
-          <h3>Visit Us</h3>
-          <span>Austin, TX</span>
-        </div>
-        <div className={styles.infoItem}>
-          <h3>Contact Us</h3>
-          <span>Email</span>
-        </div> */}
       </section>
+      <div className={styles.infoSection}>
+        <h4>hello@hirelatamdevs.com</h4>
+      </div>
       <section className={styles.registerSection}>HireLatamDevs &copy; 2024</section>
-    </div>
+    </footer>
   )
 };
 

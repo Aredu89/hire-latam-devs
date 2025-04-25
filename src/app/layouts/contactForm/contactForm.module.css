@@ -1,3 +1,5 @@
+@value tablet-bp, tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .container {
   height: 0;
   width: 0;
@@ -11,9 +13,10 @@
   z-index: 1000;
   transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   border-radius: 50%;
-  overflow: hidden;
+  overflow: scroll;
 
-  background-color: var(--light-background-color);
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(20px);
 }
 
 .open {
@@ -25,9 +28,35 @@
 
 .formContainer {
   display: flex;
-  width: 45%;
-  max-width: 750px;
+  width: 40%;
+  max-width: 580px;
   background-color: var(--white-color);
   border-radius: .5rem;
-  margin-top: 140px;
+  margin: 140px 0px;
+}
+
+/* --------- Media Queries ----------- */
+
+@media tablet-bp {
+  .formContainer {
+    width: 55%;
+  }
+}
+
+@media tablet-mini-bp {
+  .formContainer {
+    width: 65%;
+  }
+}
+
+@media mobile-landscape-bp {
+  .formContainer {
+    width: 80%;
+  }
+}
+
+@media mobile-bp {
+  .formContainer {
+    width: 90%;
+  }
 }

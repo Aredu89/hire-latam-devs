@@ -4,9 +4,11 @@
   color: white;
   font-weight: 600;
   font-size: 1.1rem;
-  padding: .5rem 1rem;
-  border-radius: 1rem;
+  padding: .6rem 1rem;
+  border-radius: 1.5rem;
   transition: all .2s;
+  width: 100%;
+  max-width: 350px;
 }
 
 .button.reverse {

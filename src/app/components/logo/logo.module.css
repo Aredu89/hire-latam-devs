@@ -1,3 +1,5 @@
+@value tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .logoContainer {
   display: flex;
   align-items: center;
@@ -38,4 +40,12 @@
   color: white;
   align-self: flex-start;
   font-size: 1.7rem;
+}
+
+/* --------- Media Queries ----------- */
+
+@media tablet-mini-bp {
+  .footer .name {
+    font-size: 1.2rem;
+  }
 }

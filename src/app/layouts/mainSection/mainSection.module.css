@@ -1,10 +1,12 @@
+@value big-screen, tablet-bp, tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .sectionContainer {
   display: grid;
   grid-template-columns: 1.5fr 1fr;
   row-gap: 3.5rem;
   column-gap: 1rem;
   padding: var(--padding-section);
-  margin-top: 115px;
+  margin-top: var(--header-height);
 }
 
 .sectionContainer h4 {
@@ -18,6 +20,7 @@
 
 .sectionContainer h2 {
   font-size: 3rem;
+  font-weight: 600;
   animation-name: moveInLeft;
   animation-duration: .8s;
   animation-timing-function: ease-in-out;
@@ -25,13 +28,13 @@
 
 .sectionContainer h5 {
   font-size: 1.5rem;
-  font-weight: 200;
+  opacity: .8;
   animation-name: moveInLeft;
   animation-duration: .8s;
   animation-timing-function: ease-in-out;
 }
 
-.latamMap {
+.latamMapContainer {
   display: flex;
   grid-column: 2 / 3;
   grid-row: 1 / span 4;
@@ -40,6 +43,95 @@
   animation-name: moveInTop;
   animation-duration: .7s;
   animation-timing-function: ease-in-out;
+}
+
+/* --------- Media Queries ----------- */
+
+@media big-screen {
+  .sectionContainer {
+    padding: var(--padding-section-big-screen);
+  }
+}
+
+@media tablet-bp {
+  .sectionContainer {
+    padding: var(--padding-section-tablet);
+    row-gap: 3rem;
+  }
+
+  .sectionContainer h4 {
+    font-size: 1.3rem;
+  }
+
+  .sectionContainer h2 {
+    font-size: 2.5rem;
+  }
+
+  .sectionContainer h5 {
+    font-size: 1.2rem;
+  }
+
+  .latamMap {
+    width: 280px;
+    height: 315px; /* 280 * 1.125 */
+  }
+}
+
+@media tablet-mini-bp {
+  .sectionContainer h4 {
+    grid-column: 1 / 3;
+    font-size: 1rem;
+  }
+
+  .sectionContainer h2 {
+    font-size: 1.5rem;
+  }
+
+  .sectionContainer h5 {
+    grid-column: 1 / 3;
+    font-size: .9rem;
+  }
+
+  .latamMapContainer {
+    grid-row: 2 / 3;
+  }
+
+  .latamMap {
+    width: 150px;
+    height: 169px;
+  }
+}
+
+@media mobile-landscape-bp {
+  .sectionContainer {
+    padding: var(--padding-section-mobile-landscape);
+    row-gap: 2rem;
+  }
+}
+
+@media mobile-bp {
+  .sectionContainer {
+    padding: var(--padding-section-mobile);
+  }
+
+  .sectionContainer h4 {
+    grid-column: 1 / 3;
+    font-size: .8rem;
+  }
+
+  .sectionContainer h2 {
+    font-size: 1.2rem;
+  }
+
+  .sectionContainer h5 {
+    grid-column: 1 / 3;
+    font-size: .8rem;
+  }
+
+  .latamMap {
+    width: 130px;
+    height: 146px;
+  }
 }
 
 /* ----- Animations ------ */

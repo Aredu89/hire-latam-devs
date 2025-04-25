@@ -1,13 +1,40 @@
+@value big-screen, tablet-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .navContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: .5rem;
   padding: var(--padding-section);
+  height: var(--header-height);
   box-shadow: 1px 0px 53px -17px rgba(0,0,0,0.8);
   background-color: #fff;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+@media big-screen {
+  .navContainer {
+    padding: var(--padding-section-big-screen);
+  }
+}
+
+@media tablet-bp {
+  .navContainer {
+    padding: var(--padding-section-tablet);
+  }
+}
+
+@media mobile-landscape-bp {
+  .navContainer {
+    padding: var(--padding-section-mobile-landscape);
+  }
+}
+
+@media mobile-bp {
+  .navContainer {
+    padding: var(--padding-section-mobile);
+  }
 }

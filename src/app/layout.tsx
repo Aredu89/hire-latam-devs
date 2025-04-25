@@ -6,8 +6,9 @@ import type { Metadata } from 'next';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Hire Latam Devs',
-  description: 'Hire the best talent in Latin America'
+  title: 'HireLatamDevs',
+  description: 'Hire the best talent in Latin America',
+  viewport: 'width=device-width, initial-scale=1'
 }
 
 export default function RootLayout({

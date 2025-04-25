@@ -8,6 +8,14 @@
   --font-primary-color: rgba(0, 0, 0, 0.8);
   --error-color: #ce4646;
   --success-color: #1a7329;
+  --header-height: 90px;
+  --collapse-menu-item-height: 45px;
+
+  /* Responsive values */
+  --padding-section-big-screen: 2.5rem 18vw;
+  --padding-section-tablet: 2.5rem 7rem;
+  --padding-section-mobile-landscape: 2.3rem 5rem;
+  --padding-section-mobile: 2.1rem 3rem;
 }
 
 * {
@@ -19,8 +27,7 @@
 html,
 body {
   max-width: 100vw;
-  overflow-x: hidden;
-  scroll-behavior: smooth !important;
+  scroll-behavior: smooth;
   color: var(--font-primary-color);
 }
 

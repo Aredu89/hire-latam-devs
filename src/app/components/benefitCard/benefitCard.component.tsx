@@ -31,12 +31,17 @@ const BenefitCard = ({title, description, rightAlignment, iconSlug}: benefitCard
           src={iconSlug}
           width={40}
           height={40}
-          alt="Icon"
+          alt={title}
           priority
         />}
         {title}
       </h3>
-      {description.map((text, indx) => (<p key={indx} className={styles.description}>{text}</p>))}
+      {description.map((text, indx) => (
+        <div key={indx} className={styles.descriptionContainer}>
+          <div className={styles.checkMark}>&#10003;</div>
+          <div className={styles.description}>{text}</div>
+        </div>
+      ))}
     </div>
   );
 };

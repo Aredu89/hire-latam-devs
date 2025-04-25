@@ -1,13 +1,16 @@
+'use client'
+
 import React from 'react';
 
-import { Logo, Menu } from '@/app/components';
+import { Logo, Menu, CollapseMenu } from '@/app/components';
 import styles from './header.module.css';
+import { useCollapsedMenu } from '@/app/context/collapsedMenu.context';
 
 const menuItems = [
   {
     id: 1,
     title: 'Home',
-    slug: '/'
+    slug: '#'
   },
   {
     id: 2,
@@ -26,11 +29,17 @@ const menuItems = [
   },
 ];
 
-const Header = () => (
-  <nav className={styles.navContainer}>
-    <Logo />
-    <Menu items={menuItems} />
-  </nav>
-);
+const Header = () => {
+  const { open } = useCollapsedMenu();
+  return (
+    <>
+      <nav className={styles.navContainer}>
+        <Logo />
+        <Menu items={menuItems} />
+      </nav>
+      <CollapseMenu items={menuItems} open={open} />
+    </>
+  )
+};
 
 export default Header;

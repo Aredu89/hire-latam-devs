@@ -1,8 +1,10 @@
+@value tablet-bp, tablet-mini-bp, mobile-landscape-bp, mobile-bp from '../../styles/variables.module.css';
+
 .form {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 3rem 5rem;
+  padding: 2.5rem 3.5rem 3rem;
   color: var(--primary-color);
   box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.2);
   border-radius: .5rem;
@@ -10,17 +12,17 @@
 }
 
 .inputContainer {
-  margin-bottom: 15px;
+  margin-bottom: 12px;
   text-transform: uppercase;
 }
 
 .input {
   width: 100%;
   font-family: inherit;
-  padding: 10px 14px;
+  padding: 14px 18px;
   font-size: 1rem;
   border-radius: 6px;
-  border: solid 1px grey;
+  border: solid 1.5px var(--font-primary-color);
   color: var(--font-primary-color);
   margin-top: 6px;
 }
@@ -41,4 +43,30 @@
   text-transform: initial;
   color: var(--error-color);
   font-weight: 300;
+}
+
+/* --------- Media Queries ----------- */
+
+@media tablet-bp {
+  .form {
+    padding: 2.5rem 4rem;
+  }
+}
+
+@media tablet-mini-bp {
+  .form {
+    padding: 2rem 3.5rem;
+  }
+}
+
+@media mobile-landscape-bp {
+  .form {
+    padding: 1.5rem 2.8rem;
+  }
+}
+
+@media mobile-bp {
+  .form {
+    padding: 1.2rem 2rem;
+  }
 }

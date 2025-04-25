@@ -1,3 +1,5 @@
+@value tablet-mini-bp, mobile-landscape-bp from '../../styles/variables.module.css';
+
 .benefitCardContainer {
   box-shadow: -4px 3px 10px 0px rgba(0,0,0,0.2);
   padding: 1.5rem 2.8rem;
@@ -30,8 +32,56 @@
   filter: invert(48%) sepia(87%) saturate(452%) hue-rotate(156deg) brightness(97%) contrast(92%);
 }
 
-.description {
-  font-weight: 300;
+.descriptionContainer {
+  display: flex;
+  font-weight: 600;
+  opacity: .8;
+  margin-bottom: 15px;
+}
+
+.descriptionContainer .checkMark {
+  min-width: 30px;
+}
+
+.descriptionContainer .description {
+  flex-grow: 1;
+}
+
+/* --------- Media Queries ----------- */
+
+@media tablet-mini-bp {
+  .benefitCardContainer {
+    padding: 1.2rem 2.5rem;
+  }
+
+  .title {
+    font-size: 1.2rem;
+  }
+
+  .title > img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media mobile-landscape-bp {
+  .benefitCardContainer {
+    padding: 1rem 2rem;
+  }
+
+  .title {
+    font-size: 1rem;
+    gap: .5rem;
+  }
+
+  .title > img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .description {
+    font-size: .8rem;
+  }
 }
 
 /* ----- Animations ------ */
